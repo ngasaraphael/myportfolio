@@ -146,9 +146,14 @@ header {
   align-items: center;
 }
 
-.logo {
-  width: 15%;
-  z-index: 99;
+.header-bar .logo {
+  color: white;
+  text-decoration: none;
+  font-weight: 700px;
+}
+
+.header-bar .logo:hover {
+  color: gold;
 }
 
 .navigation {
@@ -341,7 +346,7 @@ header {
 }
 .project img {
   width: 100%;
-  height: 58%;
+  height: 65%;
   position: relative;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -364,6 +369,10 @@ header {
   color: rgb(139, 139, 139);
   margin-bottom: 8px;
   font-size: 16px;
+}
+
+#work h3 a {
+  color: #294a83;
 }
 
 @media (max-width: 1360px) {
@@ -576,6 +585,27 @@ header {
 }
 .contact-greybg {
   background-color: rgb(247, 247, 247);
+}
+
+.form-alert {
+  width: 100%;
+  display: none;
+  padding: 14px 6px;
+  border-radius: 4px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.form-alert.success {
+  background-color: rgb(122, 243, 122);
+  display: block;
+  color: #172b4d;
+}
+
+.form-alert.failed {
+  background-color: rgb(241, 88, 88);
+  display: block;
+  color: white;
 }
 
 .contacts {

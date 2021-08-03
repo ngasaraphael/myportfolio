@@ -35,7 +35,7 @@
     <header>
       <div class="header-bar">
         <div class="logo">
-          <h3>Ngasa's Studio</h3>
+          <a class="logo" href="/">Ngasa Raphael</a>
         </div>
         <nav class="navigation">
           <ul>
@@ -70,14 +70,14 @@
         <div class="contacts">
           <div class="contact-form">
             <br />
-            <form action="#">
+            <form action="#" id="contactform">
+              <p class="form-alert"></p>
               <div class="input-group">
                 <label for="name" class="form-name">Name</label>
                 <input
                   type="name"
-                  id="name"
+                  id="form-name"
                   class="form-control"
-                  required
                   placeholder="Enter your name"
                 />
               </div>
@@ -86,9 +86,8 @@
                 <label for="email" class="form-email">Email</label>
                 <input
                   type="name"
-                  id="email"
+                  id="form-email"
                   class="form-control"
-                  required
                   placeholder="Enter your email"
                 />
               </div>
@@ -97,12 +96,11 @@
                 <label for="message" class="form-message">Gist</label>
                 <textarea
                   placeholder="Enter the gist"
-                  id="message"
-                  required
+                  id="form-message"
                 ></textarea>
               </div>
               <br />
-              <input type="button" value="submit" class="btn submit-btn" />
+              <input type="submit" value="submit" class="btn submit-btn" />
             </form>
           </div>
 
@@ -150,6 +148,5 @@
     </footer>
 
     <script src="./js/index.js"></script>
-    <script src="./js/tota11y.min.js"></script>
   </body>
 </html>
