@@ -315,6 +315,10 @@ header {
   .welcome-msg p {
     font-size: var(--mobile-font);
   }
+  .welcome-msg span {
+    font-size: var(--mobile-font);
+    text-transform: none;
+  }
 }
 
 @media (max-width: 300px) {
