@@ -157,7 +157,7 @@ header {
 }
 
 .navigation {
-  width: 80%;
+  width: 90%;
   display: flex;
 }
 
@@ -221,6 +221,7 @@ header {
     justify-content: center;
     align-items: center;
     font-size: var(--primary-font);
+    z-index: 99;
   }
 
   .navigation ul li {
@@ -253,8 +254,42 @@ header {
   border-radius: 50%;
 }
 
+.welcome-msg p {
+  font-size: var(--semilarge-font);
+}
+
 .welcome-msg span {
   font-size: var(--large-font);
+  position: relative;
+  color: #eee;
+  -webkit-text-stroke: 0.1vw white;
+  text-transform: uppercase;
+}
+
+.welcome-msg span::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #294a83;
+  -webkit-text-stroke: 0vw white;
+  border-right: 2px solid #294a83;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
 }
 
 @media (max-width: 700px) {
@@ -262,9 +297,12 @@ header {
     width: 300px;
     height: 300px;
   }
+  .welcome-msg p {
+    font-size: var(--primary-font);
+  }
 
   .welcome-msg span {
-    font-size: var(--semilarge-font);
+    font-size: var(--primary-font);
   }
 }
 
@@ -273,6 +311,9 @@ header {
     width: 280px;
     height: 280px;
     margin-top: -30px;
+  }
+  .welcome-msg p {
+    font-size: var(--mobile-font);
   }
 }
 
@@ -288,7 +329,7 @@ header {
   text-decoration: none;
   background-color: #294a83;
   color: white;
-  padding: 4px 6px;
+  padding: 6px 8px;
   border-radius: 6px;
 }
 
@@ -298,12 +339,13 @@ header {
 
 /* WORK */
 
-.work {
+.my-work {
   width: 86%;
   max-width: 1200px;
   margin: auto;
   padding-bottom: 60px;
 }
+
 .work-category {
   display: flex;
   width: 300px;
@@ -330,7 +372,8 @@ header {
 }
 
 .project {
-  width: 300px;
+  width: 280px;
+  max-width: 280px;
   height: 340px;
   border-radius: 8px;
   display: flex;
@@ -561,6 +604,9 @@ header {
   grid-template-columns: repeat(3, 1fr);
   gap: 80px;
   padding: 10px;
+}
+.methodology-1 h2 {
+  margin: 10px 0;
 }
 
 @media (max-width: 1000px) {
