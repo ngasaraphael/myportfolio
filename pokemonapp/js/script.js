@@ -200,3 +200,8 @@ pokemonRepository.loadList().then(() => {
     pokemonRepository.addListItem(pokemon);
   });
 });
+
+// copyeright date
+document
+  .getElementById('copyright')
+  .appendChild(document.createTextNode(new Date().getFullYear()));
