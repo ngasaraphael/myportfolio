@@ -143,7 +143,6 @@ header {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  align-items: center;
 }
 
 .header-bar .logo {
@@ -157,8 +156,9 @@ header {
 }
 
 .navigation {
-  width: 90%;
   display: flex;
+  position: absolute;
+  right: 60px;
 }
 
 .navigation ul {
@@ -166,7 +166,7 @@ header {
   display: flex;
   list-style: none;
   justify-content: space-around;
-  margin-left: 300px;
+  width: 300px;
 }
 
 .navigation ul li a {
