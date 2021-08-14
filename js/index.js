@@ -21,11 +21,6 @@ toggle.addEventListener('click', () => {
   navigation.classList.toggle('active');
 });
 
-//Intro Animation
-// setTimeout(() => {
-//   introAnimation.style.display = 'none';
-// }, 3000);
-
 //Job Category sorting
 //Design Jobs
 if (designBtn) {
