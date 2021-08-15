@@ -161,7 +161,6 @@ header {
   width: 360px;
   height: 360px;
   margin-bottom: 20px;
-  margin-top: -60px;
   border-radius: 50%;
 }
 
@@ -289,6 +288,7 @@ header {
   width: 280px;
   max-width: 280px;
   height: 340px;
+  border: 1px solid rgb(231, 231, 231);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -363,7 +363,7 @@ header {
 .about-info {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 40px;
+  gap: 100px;
   margin-bottom: 40px;
 }
 
@@ -372,6 +372,7 @@ header {
   width: 280px;
   max-width: 280px;
   height: 280px;
+  border: 1px solid rgb(231, 231, 231);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
