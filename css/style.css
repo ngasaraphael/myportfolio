@@ -96,6 +96,7 @@ header {
 
 .menu.active {
   background: var(--primary-color) url(../img/close.png);
+  position: fixed;
   background-size: 25px;
   background-position: center;
   background-repeat: no-repeat;
@@ -111,7 +112,7 @@ header {
   }
   .navigation ul.active {
     background-color: var(--primary-color);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
