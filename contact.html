@@ -70,38 +70,36 @@
         <div class="contacts">
           <div class="contact-form">
             <br />
-            <!-- <form
-              action="https://formsubmit.co/ngasanomie@gmail.com"
+            <form
               id="contactform"
               method="POST"
+              action="https://formsubmit.co/ngasanomie@gmail.com"
+              enctype="multipart/form-data"
             >
               <p class="form-alert"></p>
+
               <div class="input-group">
                 <label for="name" class="form-name">Name</label>
-                <input
-                  type="text"
-                  id="form-name"
-                  class="form-control"
-                  placeholder="Enter your name"
-                />
+                <input type="text" name="name" required />
               </div>
 
               <br />
+
               <div class="input-group">
                 <label for="email" class="form-email">Email</label>
-                <input
-                  type="email"
-                  id="form-email"
-                  class="form-control"
-                  placeholder="Enter your email"
-                />
+                <input type="email" name="email" placeholder="Your email" />
               </div>
               <br />
+
               <div class="input-group">
                 <label for="message" class="form-message">Message</label>
-                <textarea placeholder="Message" id="form-message"></textarea>
+                <textarea
+                  name="message"
+                  placeholder="Details of your problem"
+                ></textarea>
               </div>
               <br />
+
               <input
                 type="file"
                 name="attachment"
@@ -109,26 +107,6 @@
               />
               <br />
               <!-- <input type="submit" value="submit" class="btn submit-btn" /> -->
-
-            <!-- </form> -->
-
-            <form
-              method="POST"
-              action="https://formsubmit.co/ngasanomie@gmail.com"
-              enctype="multipart/form-data"
-            >
-              <input type="text" name="name" required />
-              <input type="email" name="email" placeholder="Your email" />
-
-              <textarea
-                name="message"
-                placeholder="Details of your problem"
-              ></textarea>
-              <input
-                type="file"
-                name="attachment"
-                accept="image/png, image/jpeg"
-              />
               <button type="submit">Send Test</button>
             </form>
           </div>
