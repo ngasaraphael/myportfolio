@@ -70,22 +70,28 @@
         <div class="contacts">
           <div class="contact-form">
             <br />
-            <form action="#" id="contactform">
+            <form
+              action="https://formsubmit.co/ngasanomie@gmail.com"
+              id="contactform"
+              method="POST"
+              enctype="multipart/form-data"
+            >
               <p class="form-alert"></p>
               <div class="input-group">
                 <label for="name" class="form-name">Name</label>
                 <input
-                  type="name"
+                  type="text"
                   id="form-name"
                   class="form-control"
                   placeholder="Enter your name"
                 />
               </div>
+
               <br />
               <div class="input-group">
                 <label for="email" class="form-email">Email</label>
                 <input
-                  type="name"
+                  type="email"
                   id="form-email"
                   class="form-control"
                   placeholder="Enter your email"
@@ -96,6 +102,12 @@
                 <label for="message" class="form-message">Message</label>
                 <textarea placeholder="Message" id="form-message"></textarea>
               </div>
+              <br />
+              <input
+                type="file"
+                name="attachment"
+                accept="image/png, image/jpeg"
+              />
               <br />
               <input type="submit" value="submit" class="btn submit-btn" />
             </form>
