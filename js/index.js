@@ -10,7 +10,7 @@ let designProjects = document.querySelectorAll('.design-project');
 let fullstackProjects = document.querySelectorAll('.fullstack-project');
 let allProjects = document.querySelectorAll('.all-projects');
 //contact form
-let contactForm = document.querySelector('#contactform');
+let contactForm = document.querySelector('.submit-btn');
 let formName = document.querySelector('#form-name');
 let formEmail = document.querySelector('#form-email');
 let formMessage = document.querySelector('#form-message');
@@ -98,5 +98,5 @@ function sendMessage(e) {
 
   setTimeout(() => {
     location.reload();
-  }, 5000);
+  }, 20000);
 }
