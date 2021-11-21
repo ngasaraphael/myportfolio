@@ -1,4 +1,5 @@
 ## myportfolio
+porfolio demonstrating a few of my projects
 
 ## Tech Stack
 HTLM.   
