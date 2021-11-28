@@ -1,5 +1,4 @@
 // Toggle menu icon
-
 let toggle = document.querySelector('.menu');
 let navigation = document.querySelector('.navigation ul');
 let introAnimation = document.querySelector('.intro-animation');
@@ -9,12 +8,6 @@ let fullStackBtn = document.querySelector('.full-stack-btn');
 let designProjects = document.querySelectorAll('.design-project');
 let fullstackProjects = document.querySelectorAll('.fullstack-project');
 let allProjects = document.querySelectorAll('.all-projects');
-//contact form
-let contactForm = document.querySelector('.submit-btn');
-let formName = document.querySelector('#form-name');
-let formEmail = document.querySelector('#form-email');
-let formMessage = document.querySelector('#form-message');
-let formAlert = document.querySelector('.form-alert');
 
 toggle.addEventListener('click', () => {
   toggle.classList.toggle('active');
@@ -61,42 +54,39 @@ document
   .getElementById('copyright')
   .appendChild(document.createTextNode(new Date().getFullYear()));
 
-//Contact  Form Validation
-contactForm.addEventListener('submit', sendMessage);
+// MODAL
+// Get the modal
+var modal = document.getElementById('myModal');
+var modal2 = document.getElementById('myModal2');
 
-function sendMessage(e) {
-  e.preventDefault();
-  let nameValue = formName.value.trim();
-  let emailValue = formEmail.value.trim();
-  let messageValue = formMessage.value.trim();
-  const re =
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+// Get the button that opens the modal
+var btn = document.getElementById('myBtn');
+var btn2 = document.getElementById('myBtn2');
 
-  if (!nameValue || !emailValue || !messageValue) {
-    formAlert.innerText = 'Please fill all input fields';
-    formAlert.classList.add('failed');
-    formName.value = formName.value.trim();
-    formEmail.value = formEmail.value.trim();
-    formMessage.value = formMessage.value.trim();
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName('close')[0];
+var span2 = document.getElementsByClassName('close2')[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function () {
+  modal.style.display = 'block';
+};
+
+btn2.onclick = function () {
+  modal2.style.display = 'block';
+};
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = 'none';
+};
+span2.onclick = function () {
+  modal2.style.display = 'none';
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
   }
-
-  if (!emailValue.match(re)) {
-    formAlert.innerText = 'Please enter valid email';
-    formAlert.classList.add('failed');
-    formName.value = formName.value.trim();
-    formEmail.value = formEmail.value.trim();
-    formMessage.value = formMessage.value.trim();
-  }
-
-  if (nameValue && messageValue && emailValue.match(re)) {
-    formAlert.innerText = 'Thanks for reaching out I will get back to you ASAP';
-    formAlert.classList.add('success');
-    formName.value = '';
-    formEmail.value = '';
-    formMessage.value = '';
-  }
-
-  setTimeout(() => {
-    location.reload();
-  }, 20000);
-}
+};
